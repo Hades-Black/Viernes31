@@ -37,7 +37,16 @@ var bIgual = document.getElementById('bequal');
 bIgual.addEventListener('click', function () { igual() });
 
 function igual() {
+
+  if (tresultado.value.includes("√")) {
+    var result = tresultado.value.replace("√", "")
+    tresultado.value = Math.sqrt(result)
+  }
+
+  if (tresultado.value.includes ("^2")) {
+    var squareTwo = tresultado.value.replace("^2", "")
+    tresultado.value = Math.pow(squareTwo, 2)}
+
   tresultado.value = eval(tresultado.value)
 }
-
 
